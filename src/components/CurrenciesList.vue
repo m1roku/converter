@@ -1,12 +1,9 @@
 <script setup>
 	import CurrencyPair from './CurrencyPair.vue'
-	import { toRefs } from 'vue';
 
-	const props = defineProps({
+	defineProps({
 		currencies: Object,
 	});
-
-	const { currencies: currenciesList } = toRefs(props)
 
 </script>
 
@@ -14,7 +11,7 @@
 	<ul class="currencies-list">
 		<li
 			class="currencies-list__item"
-			v-for="currency in currenciesList">
+			v-for="currency in currencies">
 			<currency-pair
 				:currency="currency"
 				:key="currency.ID" />

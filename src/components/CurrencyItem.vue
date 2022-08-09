@@ -1,15 +1,11 @@
 <script setup>
 
-	import {toRefs} from 'vue';
-
-	const props = defineProps({
+	defineProps({
 		currency: {
 			type: Object,
 			required: true
 		}
 	})
-
-	const { currency } = toRefs(props)
 
 </script>
 
