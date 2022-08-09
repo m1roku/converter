@@ -1,21 +1,12 @@
 <script setup>
-
 	import BaseSelect from '../components/BaseSelect.vue'
 	import BaseInput from '../components/BaseInput.vue'
 	import BaseIcon from '../components/BaseIcon.vue'
-	import {computed, onMounted, ref, watch} from 'vue';
+	import {computed, onMounted} from 'vue';
 	import {useStore} from 'vuex';
-
+	import {useConverter} from '../composables/useConverter';
 	const store = useStore()
-
 	const currencies = computed(() => store.state.currenciesList)
-	const leftCurrency = ref('1')
-	const rightCurrency = ref('1')
-	const leftValue = ref('')
-	const rightValue = computed(() => {
-		const ratio = leftCurrency.value / rightCurrency.value
-		return leftCurrency.value === '1' ? '' : leftValue.value * ratio
-	})
 
 	onMounted(() => {
 		if (!currencies.value.length) {
@@ -23,15 +14,8 @@
 		}
 	})
 
-	const inverseConverter = () => {
-		const tempCurrency = {
-			left: leftCurrency.value,
-			right: rightCurrency.value
-		}
+	const { leftCurrency, rightCurrency, leftValue, rightValue, inverseConverter } = useConverter()
 
-		leftCurrency.value = tempCurrency.right
-		rightCurrency.value = tempCurrency.left
-	}
 </script>
 
 <template>
