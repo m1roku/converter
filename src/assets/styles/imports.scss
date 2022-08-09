@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'reset';
+@import "grid";
+
+// blocks
+
+@import 'blocks/header';
+@import 'blocks/main';
+@import 'blocks/logo';
+@import 'blocks/button';
+@import 'blocks/currencies-list';
+@import 'blocks/currency-pair';
+@import 'blocks/currency-item';
+@import 'blocks/search-bar';
+@import 'blocks/main-menu';
+@import 'blocks/converter';
+@import 'blocks/input';
+@import 'blocks/select';
+

@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  color: $main-decorate;
+  background-color: transparent;
+  border: 0;
+  border-radius: 4px;
+  transition: box-shadow 0.25s ease-out;
+
+  svg {
+    width: 100%;
+    height: auto
+  }
+
+  &:hover {
+    box-shadow: 0 2px 6px rgba(26, 66, 48, 0.25);
+  }
+}

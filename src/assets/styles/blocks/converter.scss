@@ -1,0 +1,28 @@
+.converter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  &__block {
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+  }
+
+  &__controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}

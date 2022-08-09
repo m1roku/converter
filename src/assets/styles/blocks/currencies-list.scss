@@ -1,0 +1,8 @@
+.currencies-list {
+
+  &__item {
+    &:nth-child(even) {
+      background-color: $main-decorate-weakest;
+    }
+  }
+}
